@@ -1,0 +1,80 @@
+@import url("reset.css");
+
+/* Фарбуємо: */
+
+/* Всі посилання всередині .nav-list) */
+.nav-list a {
+   color: blue;
+}
+
+/* Всі <mark> */
+mark {
+   color: green;
+}
+
+/* Заголовки */
+h1 {
+   color: rgb(255, 0, 200);
+}
+h2 {
+   color: red;
+}
+h3 {
+   color: rgb(0, 145, 150);
+}
+
+/* Всі елементи які містять в назві класу "text" всередині .notable-figures */
+.notable-figures [class*="text"] {
+   color: rgb(175, 2, 255);
+}
+
+/* Параграфи які знаходяться безпосередньо після <ol> на одному рівні вкладеності*/
+ol + p {
+   color: rgb(250, 101, 2);
+}
+
+/* Всі <span> всередині маркованого списку з класом context-life-ukrainka-text всередині #context-life */
+#context-life ul.context-life-shvchenko-text span {
+   color: rgb(180, 0, 0);
+}
+
+/* Всі <span> всередині #context-life */
+#context-life span {
+   color: red;
+}
+
+/* Колір не змінтиться тому, що #content-life span вище має вужче коло пошуку */
+.span {
+   color: rgb(72, 255, 0);
+}
+
+/* Всі параграфи які знаходяться після .text-content-list на одному рівні вкладеності */
+.text-content-list ~ p {
+   color: blueviolet;
+}
+
+/* Всі посилання які йдуть після посилань на одному рівні вкладеності */
+a ~ a {
+   color: #f00;
+}
+
+/* Всі об'єкти всередині .libraries-content-list який знаходиться в .libraries-content*/
+.libraries-content .libraries-content-list {
+   color: rgb(194, 174, 0);
+}
+
+/* Всі параграфи які знаходяться після .world-recognition-content на одному рівні вкладеності */
+.world-recognition-content > p {
+   color: brown;
+}
+
+/* Тільки класи, які містять подвійну назву .contacts-list-link та .link */
+.contacts-list-link.link {
+   color: rgb(3, 182, 122);
+}
+
+/* Всі об'єкти в середині <ul> та <ol> */
+ul, ol * {
+   color: #000;
+   /* Для естетики=) */
+}
