@@ -7,6 +7,10 @@
    color: blue;
 }
 
+a {
+   text-decoration: none;
+}
+
 /* Всі <mark> */
 mark {
    color: green;
@@ -22,10 +26,13 @@ h2 {
 h3 {
    color: rgb(0, 145, 150);
 }
-
-/* Всі елементи які містять в назві класу "text" всередині .notable-figures */
-.notable-figures [class*="text"] {
+h4 {
    color: rgb(175, 2, 255);
+}
+
+/* Всі елементи які містять в назві класу "container" всередині .figures */
+.figures [class*="container"] {
+   color: #000;
 }
 
 /* Параграфи які знаходяться безпосередньо після <ol> на одному рівні вкладеності*/
@@ -33,23 +40,23 @@ ol + p {
    color: rgb(250, 101, 2);
 }
 
-/* Всі <span> всередині маркованого списку з класом context-life-ukrainka-text всередині #context-life */
-#context-life ul.context-life-shvchenko-text span {
+/* Всі <span> всередині маркованого списку з класом context-shvchenko-text всередині #context */
+#context ul.context-shvchenko-text span {
    color: rgb(180, 0, 0);
 }
 
-/* Всі <span> всередині #context-life */
-#context-life span {
+/* Всі <span> всередині #context */
+#context span {
    color: red;
 }
 
-/* Колір не змінтиться тому, що #content-life span вище має вужче коло пошуку */
+/* За назвою класу .span */
 .span {
-   color: rgb(72, 255, 0);
+   color: yellowgreen;
 }
 
-/* Всі параграфи які знаходяться після .text-content-list на одному рівні вкладеності */
-.text-content-list ~ p {
+/* Всі параграфи які знаходяться після .legacy-content-list на одному рівні вкладеності */
+.legacy-content-list ~ p {
    color: blueviolet;
 }
 
