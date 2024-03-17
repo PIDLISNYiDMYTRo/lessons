@@ -1,0 +1,120 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+
+/* Локальні шрифти */
+@import url("fonts.css");
+/* Обнулення */
+@import url("reset.css");
+
+body {
+   font-family: "Proxima Nova", sans-serif;
+   font-weight: 400;
+}
+header, footer {
+   font-family: "Montserrat", sans-serif;
+   text-align: center;
+}
+
+/* Заголовки */
+h1 {
+   font-weight: 700;
+   font-size: 40px;
+   letter-spacing: 4px;
+   text-align: center;
+   text-transform: capitalize;
+}
+h2 {
+   font-weight: 700;
+   font-size: 32px;
+   text-align: left;
+   white-space: nowrap;
+}
+h3 {
+   font-family: "Kobzar KS", fantasy;
+   font-size: 34px;
+   font-weight: 600;
+   line-height: 1.3;
+   letter-spacing: 3px;
+   color: rgba(43, 43, 43, 0.911);
+   text-align: center;
+}
+h4 {
+   font-size: 22px;
+   font-weight: 700;
+}
+h1, h2, h4 {
+   line-height: 2;
+}
+
+/* Загальні стилі */
+ul {
+   line-height: 1.4;
+}
+span {
+   font-style: italic;
+   font-weight: 600;
+   text-decoration: underline;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.603);
+}
+.figures ul + p,
+.legacy-content-list + p {
+   line-height: 2;
+   font-weight: 600;
+   font-size: 18px;
+}
+.libraries p,
+.recognition p {
+   line-height: 1.6;
+   font-weight: 600;
+   font-size: 18px;
+}
+
+/* Introduction */
+.introduction p {
+   font-size: 18px;
+   word-spacing: 1px;
+   letter-spacing: 1px;
+   text-align: justify;
+}
+
+/* Figures */
+.nav-list {
+   color: blueviolet;
+   text-transform: uppercase;
+}
+/* Центруємо класи у яких в назві є "-top" */
+[class*="-top"] {
+   text-align: center;
+}
+/* Стилі для <p> в класах у назві яких є "-top" в розділі .figures */
+[class*="-top"] p {
+   font-family: "Kobzar KS";
+   font-size: 28px;
+   color: rgba(43, 43, 43, 0.911);
+}
+/* Відступи для <ul> та його дочірніх елементів у розділі .figures */
+.figures ul {
+   line-height: 1.4;
+}
+
+/* Honor */
+.honor p {
+   line-height: 1.3;
+}
+.museums p mark {
+   color: brown;
+   text-decoration: underline;
+}
+.libraries ul {
+   font-style: oblique;
+   color: brown;
+}
+
+/* Footer */
+.contacts-list ol {
+   color: blueviolet;
+}
+.author {
+   text-shadow: -2px -2px 5px #f00, 3px 3px 5px rgb(47, 31, 105);
+   text-decoration: none;
+}
