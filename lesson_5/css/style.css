@@ -1,0 +1,307 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:500&display=swap");
+
+/* Локальні шрифти */
+@import url("fonts.css");
+/* Обнулення */
+@import url("reset.css");
+
+body {
+   font-family: "Proxima Nova", sans-serif;
+   font-weight: 400;
+}
+.container {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+/* Header */
+.header {
+   color: #535353;
+}
+.header ul {
+   display: inline-block;
+}
+.header ul li {
+   display: inline-block;
+}
+/* Header top */
+.header-top {
+   padding: 15px 0;
+   /* Щоб прибрати фантомний відступ */
+   font-size: 0;
+   background-color: #f8f8f8;
+   margin-bottom: 25px;
+}
+.header-top ul {
+   width: 50%;
+   font-size: 16px;
+   line-height: 1.875; /* 30/16 */
+}
+.nav-list li {
+   margin: 0 30px 0 0;
+}
+.contacts-list {
+   text-align: right;
+   /* При зменшенні ширини вікна вирівнюємо по верхньому краю */
+   vertical-align: top;
+}
+.contacts-list li {
+   margin: 0 0 0 10px;
+}
+/* На випадок більшого зображення обмежуємо картинку */
+.header-top img {
+   max-width: 30px;
+}
+
+/* Header body */
+.header-body {
+   margin-bottom: 25px;
+}
+/* На випадок більшого зображення обмежуємо картинку */
+.header-logo {
+   max-width: 250px;
+}
+.header-logo img {
+   width: 100%;
+}
+
+/* Divider */
+.divider {
+   height: 2px;
+   background-color: #f8f8f8;
+}
+
+/* Header bottom */
+.header-bottom {
+   font-size: 0;
+   font-weight: 600;
+   padding: 18px 0;
+}
+.header-bottom ul {
+   font-size: 19px;
+   line-height: 1.26;
+}
+.discounts-list {
+   max-width: 39%;
+}
+.discounts-list li {
+   margin-right: 40px;
+}
+/* Заборона іконці відриватись від тексту при зменшенні області перегляду */
+.discounts-list a {
+   white-space: nowrap;
+}
+.discounts-list a div {
+   display: inline-block;
+}
+.category-list {
+   max-width: 61%;
+   text-align: right;
+}
+.category-list li {
+   margin-left: 40px;
+}
+
+/* Page */
+.page {
+   background-color: #f8f8f8;
+   padding-bottom: 40px;
+}
+
+/* Page navigation list */
+.page-nav {
+   padding: 5px;
+   color: #535353;
+   line-height: 1.875; /* 30/16 */
+   margin-bottom: 40px;
+}
+.page-nav li {
+   display: inline-block;
+}
+.page-nav img {
+   max-width: 24px;
+   /* Центруємо стрілки */
+   vertical-align: middle;
+}
+.active-link {
+   color: #ffbc57;
+}
+
+/* Container content */
+.container-content {
+   max-width: 1100px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.article {
+   /* Колір блоку за замовчуванням */
+   color: #2b2929;
+}
+.article h1 {
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 1.2; /* 48/40 */
+   margin-bottom: 40px;
+}
+/* Схлопування margin з .article-top */
+.article p {
+   line-height: 1.87;
+   margin: 0 0 20px 0;
+}
+/* Схлопування margin з .article p */
+.article-top {
+   margin: 0 0 40px 0;
+}
+.article-top img {
+   /* Дозволяємо зображенню зменшуватись */
+   max-width: 100%;
+   margin: 0 0 40px 0;
+}
+
+/* Article body */
+.article-body {
+   margin-bottom: 40px;
+}
+.article-body h2 {
+   font-size: 20px;
+   line-height: 1.4;
+   font-weight: 600;
+   margin-bottom: 30px;
+}
+/* Схлопування margin з ul li */
+.article-body ul {
+   line-height: 1.87;
+   margin-bottom: 40px;
+}
+/* Схлопування margin з ul */
+.article-body ul li {
+   margin-bottom: 20px;
+}
+.article-body ul div {
+   display: inline-block;
+   /* Для того щоб картинка й текст були в одному рядку */
+   max-width: 95%;
+   padding-left: 15px;
+}
+.article-body ul img {
+   max-width: 32px;
+}
+
+/* Article bottom */
+.article-bottom {
+   font-size: 0;
+}
+.article-bottom div {
+   display: inline-block;
+   width: 50%;
+}
+.forward-page {
+   text-align: right;
+}
+.article-bottom a {
+   padding: 13px 51px;
+   font-size: 19px;
+   line-height: 1.26;
+   font-weight: 600;
+   color: #fff;
+   background-color: #ffbc57;
+}
+.article-bottom img {
+   max-width: 24px;
+   vertical-align: middle;
+}
+
+/* Footer */
+.footer {
+   background-color: #2b2929;
+}
+.copyright {
+   padding: 20px 0;
+   font-size: 15px;
+   line-height: 1.47;
+   text-align: center;
+   color: #b1b1b1;
+}
+
+
+/* -------------- Kravato Is 2-page -------------- */
+.container-krovato {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.krovato {
+   padding: 40px 0;
+   color: #2b2929;
+}
+.krovato span {
+   text-transform: uppercase;
+}
+.krovato h1 {
+   margin: 0px 0px 40px 0px;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 1.2;
+   text-align: center;
+}
+.krovato-items {
+   /* "Прибираємо margin лівий для першої .item та правий для останньої .item" */
+   margin: 0 -15px;
+   font-size: 0;
+   text-align: center;
+}
+.krovato-items .item {
+   width: 300px;
+   /* Щоб картки були однакової висоти з можливістю збільшення за потреби */
+   min-height: 485px;
+   display: inline-block;
+   margin: 0px 15px 30px 15px;
+   vertical-align: top;
+}
+.krovato-items .item img {
+   max-width: 170px;
+   margin-bottom: 20px;
+}
+.krovato-items .item h2 {
+   margin: 0px 0px 20px 0px;
+   font-size: 26px;
+   font-weight: 600;
+   line-height: 1.31;
+}
+.krovato-items .item p {
+   font-size: 16px;
+   line-height: 1.87;
+}
+
+
+/* -------------- Follow Products 3-page -------------- */
+.container-follow {
+   max-width: 1350px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.follow {
+   padding: 100px 0;
+   font-family: "Roboto", sans-serif;
+}
+.follow h1 {
+   margin: 0px 0px 60px 0px;
+   font-size: 50px;
+   font-weight: 500;
+   text-transform: capitalize;
+   text-align: center;
+}
+.follow-items {
+   margin: 0 -12px;
+   font-size: 0;
+   /* Забороняємо зображенням переходити в новий рядок */
+   white-space: nowrap;
+   /* Додаємо смугу прокрутки зображень */
+   overflow: auto;
+}
+.follow-items .item {
+   display: inline-block;
+   margin: 0 12px 12px 12px;
+}
