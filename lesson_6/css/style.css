@@ -1,0 +1,394 @@
+/* Google Fonts */
+/* Coral */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular&display=swap");
+/* EduPlay */
+@import url("https://fonts.googleapis.com/css?family=Quicksand:500,700&display=swap");
+
+/* Локальні шрифти */
+/* Krovato */
+@import url("fonts.css");
+/* Обнулення */
+@import url("reset.css");
+
+
+/* ----------- index.html ----------- */
+.container {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+/* Header */
+.header {
+   font-family: "Proxima Nova", sans-serif;
+   color: #535353;
+   font-weight: 400;
+}
+.header ul {
+   display: inline-block;
+}
+.header ul li {
+   display: inline-block;
+}
+
+/* Header top */
+.header-top {
+   padding: 30px 0 15px 0;
+   font-size: 0;
+   background-color: #f8f8f8;
+}
+.header-top ul {
+   width: 50%;
+   font-size: 16px;
+   line-height: 1.87;
+}
+.header-nav li {
+   margin: 0px 30px 0px 0px;
+}
+.header-support {
+   text-align: right;
+   /* При зменшенні в'юпорта вирівнюємо по верхньому краю */
+   vertical-align: top;
+}
+.header-support li {
+   margin: 0px 0px 0px 10px;
+}
+.header-support img {
+ /* На випадок більшої іконки */
+   max-width: 30px;
+}
+
+/* Header logo */
+.header-logo {
+   padding: 25px 0;
+}
+
+/* Divider */
+.divider {
+   height: 2px;
+   background-color: #f8f8f8;
+}
+
+/* Header bottom */
+.header-bottom {
+   padding: 18px 0;
+   font-size: 0;
+   font-weight: 600;
+   line-height: 1.26;
+}
+.header-bottom ul {
+   font-size: 19px;
+}
+.header-discounts {
+   width: 39%;
+}
+.header-discounts li {
+   margin: 0px 40px 0px 0px;
+}
+.header-discounts a {
+   /* При зменшенні в'юпорта заборона іконці відриватись від тексту */
+   white-space: nowrap;
+}
+.header-discounts img {
+   max-width: 24px;
+}
+.header-category {
+   width: 61%;
+   text-align: right;
+   vertical-align: top;
+}
+.header-category li {
+   margin: 0px 0px 0px 40px;
+}
+
+/* Longue */
+.lounge {
+   font-family: "Proxima Nova", sans-serif;
+   font-weight: 400;
+   padding: 5px 0px 40px 0px;
+   color: #2b2929;
+   background-color: #f8f8f8;
+}
+.lounge-nav {
+   margin: 0px 0px 40px 0px;
+   line-height: 1.87;
+}
+.lounge-nav li {
+   display: inline-block;
+}
+.lounge-nav img {
+   max-width: 24px;
+   vertical-align: middle;
+}
+.active {
+   color: #ffbc57;
+}
+
+/* Lounge container */
+.lounge-container {
+   max-width: 1070px;
+   margin: 0 auto;
+}
+/* Lounge top */
+.lounge-top {
+   /* Схлопування margin з .lounge-top p */
+   margin: 0px 0px 40px 0px;
+}
+.lounge-top h1 {
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 1.2;
+   margin: 0px 0px 40px 0px;
+}
+.lounge-top img {
+   max-width: 100%;
+   /* На випадок прямокутного зображення */
+   border-radius: 8px;
+   margin: 0px 0px 40px 0px;
+}
+.lounge-top p {
+   line-height: 1.87;
+   /* Схлопування margin з .lounge-top */
+   margin: 0px 0px 20px 0px;
+}
+
+/* Lounge bottom */
+.lounge-bottom h2 {
+   font-size: 20px;
+   font-weight: 600;
+   line-height: 1.4;
+   margin: 0px 0px 30px 0px;
+}
+.lounge-bottom ul {
+   line-height: 1.87;
+   /* Схлопування margin з .lounge-container ul li */
+   margin: 0px 0px 40px 0px;
+}
+.lounge-bottom ul li {
+   /* Схлопування margin з .lounge-container ul */
+   margin: 0px 0px 20px 0px;
+   background-image: url("../img/mark.svg");
+   background-repeat: no-repeat;
+   padding: 0px 0px 0px 47px;
+}
+.lounge-bottom p {
+   line-height: 1.87;
+   margin: 0px 0px 40px 0px;
+}
+
+/* Blog page */
+.blog-page {
+   font-size: 0;
+}
+.blog-page div {
+   display: inline-block;
+   width: 50%;
+}
+.back-page img {
+    /* Відступ для стрілки */
+   margin: 0px 15px 0px 0px;
+}
+.forward-page {
+   text-align: right;
+}
+.forward-page img {
+   margin: 0px 0px 0px 15px;
+}
+.blog-page a {
+   padding: 13px 51px;
+   border-radius: 8px;
+   font-size: 19px;
+   font-weight: 600;
+   line-height: 1.26;
+   color: #fff;
+   background-color: #ffbc57;
+}
+
+/* Footer */
+.footer {
+   background-color: #2b2929;
+   text-align: center;
+}
+.copyright {
+   padding: 20px 0;
+   font-size: 15px;
+   line-height: 1.47;
+   color: #b1b1b1;
+}
+/* ================================== */
+
+
+/* ----------- coral.html ----------- */
+.container-coral {
+   max-width: 1350px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.header-coral {
+   min-height: 100%;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   background: rgba(30, 40, 50, 0.05) url("../img/koral/bg-flower.svg") center/contain no-repeat;
+}
+.coral-top {
+   padding: 31px 0px 25px 0px;
+   text-align: center;
+   margin: 0px 0px 135px 0px;
+}
+.coral-logo img {
+   max-width: 180px;
+}
+.coral-body {
+   /* Щоб вирівняти зображення по правому краю */
+   max-width: 1222px;
+   background: url("../img/koral/girl.svg") right/contain no-repeat;
+}
+.coral-content {
+   max-width: 686px;
+   padding: 74px 0px 124px 0px;
+   text-transform: capitalize;
+}
+.coral-content h1 {
+   font-size: 74px;
+   font-weight: 300;
+   line-height: 0.74;
+   margin: 0px 0px 52px 0px;
+}
+.coral-content p {
+   font-size: 30px;
+   line-height: 1.83;
+   margin: 0px 0px 66px 0px;
+}
+.coral-content a {
+   font-size: 29px;
+   color: #fff;
+   background-color: #1e2832;
+   padding: 19px 26px;
+}
+/* Огортаємо img в span для того щоб вирівняти іконку відносно тексту*/
+.coral-content span {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 0px 8px 0px 0px;
+}
+.coral-content img {
+   max-width: 30px;
+}
+/* ================================== */
+
+
+/* ----------- eduplay.html ----------- */
+.header-eduplay, .page-eduplay {
+   font-family: "Quicksand", sans-serif;
+   font-weight: 500;
+}
+.container-eduplay {
+   max-width: 1270px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.header-eduplay {
+   padding: 18px 0;
+}
+.eduplay-content {
+   font-size: 0;
+}
+.eduplay-logo, .eduplay-nav {
+   display: inline-block;
+   width: 50%;
+   font-size: 16px;
+   vertical-align: middle;
+}
+.eduplay-nav {
+   text-align: right;
+   line-height: 1.56;
+   color: #313c45;
+}
+.eduplay-nav li {
+   display: inline-block;
+   margin: 0px 0px 0px 48px;
+}
+.active-eduplay {
+   font-weight: 700;
+   color: #0d1216;
+}
+
+/* Page eduplay */
+.page-eduplay {
+   /* Для того щоб побачити background-attachment в .explore додамо прокручування */
+   height: 200%;
+   background-image: url("../img/eduplay/bg-texture.png");
+}
+
+/* Explore */
+.explore {
+   background-color: #914cff;
+   background-image:
+      url("../img/eduplay/bg-gradient.svg"),
+      url("../img/eduplay/bg-alphabet.svg");
+   background-position: center;
+   background-size: cover, contain;
+   background-repeat: no-repeat, repeat;
+   background-attachment: fixed;
+}
+.explore-content {
+   background: url("../img/eduplay/kids.svg") right no-repeat;
+}
+.explore-text {
+   max-width: 600px;
+   padding: 122px 0;
+}
+.explore-text h1 {
+   font-size: 40px;
+   font-weight: 700;
+   line-height: 1.2;
+   color: #fff;
+   margin: 0px 0px 24px 0px;
+}
+.explore-text p {
+   font-size: 20px;
+   line-height: 1.6;
+   color: #fff;
+   margin: 0px 0px 24px 0px;
+}
+.explore-text a {
+   padding: 12px 20px;
+   border-radius: 8px;
+   background-color: #fff;
+   font-weight: 700;
+   line-height: 1.56;
+   color: #0d1216;
+}
+/* ================================== */
+
+/* Navigations site */
+#site-nav {
+   font-family: "Quicksand", sans-serif;
+   font-weight: 700;
+   padding: 40px 0;
+   width: 600px;
+   margin: 0 auto;
+}
+#site-nav a {
+   padding: 12px 22px;
+   color: #fff;
+   background: linear-gradient(90deg, rgba(255,188,87,1) 0%, rgba(30,40,50,1) 50%, rgba(145,76,255,1) 100%);
+   box-shadow:
+   2.8px 2.8px 1.6px rgba(0, 0, 0, 0.02),
+   6.7px 6.7px 3.8px rgba(0, 0, 0, 0.028),
+   12.5px 12.5px 7.1px rgba(0, 0, 0, 0.035),
+   22.3px 22.3px 12.7px rgba(0, 0, 0, 0.042),
+   41.8px 41.8px 23.8px rgba(0, 0, 0, 0.05),
+   100px 100px 57px rgba(0, 0, 0, 0.07), inset 2px 2px 2px #00000056;
+   text-shadow: 2px 2px 2px #00000056;
+   border: 1px solid #00000056;
+   margin: 0 50px;
+}
+.back-site {
+   border-radius: 53% 10% 85% 42% / 44% 45% 84% 100%;
+}
+.forward-site {
+   border-radius: 21% 54% 85% 40% / 44% 88% 84% 100%;
+}
