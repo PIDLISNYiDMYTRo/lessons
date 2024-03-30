@@ -1,0 +1,78 @@
+/* Обнулення */
+@import url("reset.css");
+
+.container {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.page {
+   padding: 20px 0;
+   background-color: rgba(174, 217, 143, 0.5);
+}
+
+.category-image > * {
+   margin-bottom: 40px;
+}
+.category-image {
+   text-align: center;
+}
+.category-image div {
+   padding: 20px 0;
+   border-radius: 20px;
+   box-shadow: inset 0px 0px 10px grey;
+}
+.title {
+   font-size: 50px;
+   letter-spacing: 2px;
+}
+.subtitle {
+   font-size: 40px;
+   margin-bottom: 20px;
+   font-style: italic;
+}
+.icon p {
+   display: inline-block;
+   background: url("../img/icon/question.svg") left / 40px 40px no-repeat;
+   padding-left: 55px;
+}
+p {
+   font-size: 24px;
+   line-height: 1.4;
+}
+p:hover {
+   color: #df982d;
+}
+.raster img {
+   max-width: 650px;
+}
+.vector img {
+   max-width: 100px;
+}
+a {
+   font-size: 20px;
+   padding: 12px 35px;
+   border-radius: 8px;
+   color: #fff;
+   background-color: #df982d;
+   box-shadow: 2px 2px 5px #000;
+   margin-bottom: 20px;
+}
+a:hover {
+   background-color: #ff9900e1;
+   box-shadow: 0 0 3px #000;
+}
+.show li {
+   display: inline-block;
+   margin: 0 20px;
+}
+.show {
+   visibility: hidden;
+}
+.show:target {
+   visibility: visible;
+}
+.category-image > *:last-child {
+   margin-bottom: 0;
+}
