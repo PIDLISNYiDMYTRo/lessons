@@ -1,0 +1,417 @@
+/* Google Fonts */
+/* About, Footer */
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,700&display=swap");
+
+/* Локальні шрифти */
+/* Blog */
+@import url("fonts.css");
+/* Обнулення */
+@import url("reset.css");
+
+/* Header */
+.container {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.header {
+   font-family: "Proxima Nova", sans-serif;
+   font-weight: 600;
+   font-size: 19px;
+   line-height: 1.26;
+   color: #535353;
+}
+.header-top {
+   padding: 25px 0;
+   text-align: center;
+}
+.header-logo img {
+   max-width: 250px;
+}
+.header-divider {
+   height: 2px;
+   background-color: #f8f8f8;
+}
+.header-bottom {
+   padding: 18px 0;
+}
+.header-nav {
+   text-align: center;
+}
+.header-nav li {
+   display: inline-block;
+   margin-right: 40px;
+   text-transform: capitalize;
+}
+/* Для практики */
+.header-nav li:last-of-type {
+   margin-right: 0;
+}
+.header-nav li a:visited {
+   color: #000;
+}
+.header-nav li a:hover {
+   color: #ffbc57;
+}
+.header-nav li a:active {
+   color: #d3973e;
+}
+a:focus-visible {
+   outline: 4px dotted #d3973e;
+   outline-offset: 3px;
+}
+
+/* Page */
+/* Blog */
+.container-blog {
+   max-width: 1070px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.blog {
+   font-family: "Proxima Nova", sans-serif;
+   font-weight: 400;
+   color: #2b2929;
+   background-color: #f8f8f8;
+}
+.article {
+   padding: 40px 0;
+}
+.article > * {
+   margin-bottom: 40px;
+}
+.article h1 {
+   font-weight: 600;
+   font-size: 40px;
+   line-height: 1.2;
+}
+.article img {
+   max-width: 100%;
+   border-radius: 8px;
+}
+.article h2 {
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 1.4;
+   margin-bottom: 30px;
+}
+.article ul li, .article-text p {
+   line-height: 1.87;
+   margin-bottom: 20px;
+}
+.article ul li:last-child, .article-text p:last-child {
+   margin-bottom: 0;
+}
+.article li {
+   padding-left: 47px;
+   background: url("../img/mark.svg") 0 0 / 32px 32px no-repeat;
+}
+.article > *:last-child {
+   margin-bottom: 0;
+}
+
+/* Games */
+.game {
+   text-align: center;
+}
+.game div:first-child {
+   padding: 40px 0;
+}
+.game a {
+   padding: 40px 80px;
+   font-size: 30px;
+   color: #fff;
+   border-radius: 15px;
+   background-color: rgb(189, 0, 0);
+   text-shadow: 3px 3px 5px #000;
+   box-shadow:  0 0 20px #000;
+}
+.game a:hover {
+   box-shadow:  0 0 30px #000;
+   background-color: rgb(221, 0, 0);
+}
+.game-box {
+   font-size: 0;
+   background-color: grey;
+   padding: 50px;
+   text-align: left;
+   display: none;
+}
+.game-box:target {
+   display: block;
+}
+
+.start {
+   display: inline-block;
+}
+.start div, .finish div {
+   width: 100px;
+   height: 100px;
+   background-color: #000000c5;
+}
+.finish {
+   margin-left: 700px;
+}
+.finish div {
+   display: inline-block;
+}
+
+.game-box > div {
+   width: 100px;
+   height: 100px;
+   visibility: hidden;
+   background-color: green;
+   background-color: rgb(0, 189, 0);
+}
+.game-box .start, .game-box .finish {
+   width: inherit;
+   height: inherit;
+   visibility: visible;
+   background-color: inherit;
+}
+.game-box .track1 {
+   display: inline-block;
+   margin-bottom: 100px;
+   border-radius: 10px 0 0 10px;
+   visibility: visible;
+   background-color: rgb(189, 0, 0);
+}
+.track2 {
+   display: inline-block;
+   margin-bottom: 100px;
+}
+.track3 {
+   display: inline-block;
+   margin-bottom: 100px;
+}
+.game-box .track4 {
+   height: 200px;
+   display: inline-block;
+}
+.track5 {
+   margin-left: 400px;
+}
+.game-box .track6 {
+   width: 400px;
+   margin-left: 100px;
+}
+.track7 {
+   margin-left: 100px;
+}
+.game-box .track8 {
+   width: 500px;
+   margin-left: 100px;
+}
+.game-box .track9 {
+   width: 200px;
+   margin-left: 500px;
+}
+.game-box .track10 {
+   width: 300px;
+   display: inline-block;
+   margin-left: 600px;
+}
+.track11 {
+   display: block;
+   margin-left: 800px;
+}
+.game-box .track12 {
+   display: inline-block;
+   margin-left: 800px;
+   border-radius: 0 0 10px 10px;
+   background-color: rgb(189, 0, 0);
+}
+
+.track1:hover + .start div:nth-child(2) {
+   background-color: green;
+   background-color: rgb(0, 189, 0);
+}
+.start div:nth-child(2):hover {
+   background-color: green;
+   background-color: rgb(0, 189, 0);
+}
+.start:hover + .track2, .track2:hover {
+   visibility: visible;
+}
+.track11:hover + .finish div:nth-child(2) {
+   background-color: green;
+   background-color: rgb(0, 189, 0);
+}
+.finish div:nth-child(2):hover {
+   background-color: green;
+   background-color: rgb(0, 189, 0);
+}
+.finish:hover + .track12, .track12:hover {
+   visibility: visible;
+}
+
+.track2:hover + .track3, .track3:hover {
+   visibility: visible;
+}
+.track3:hover + .track4, .track4:hover {
+   visibility: visible;
+}
+.track4:hover + .track5, .track5:hover {
+   visibility: visible;
+}
+.track5:hover + .track6, .track6:hover {
+   visibility: visible;
+}
+.track6:hover + .track7, .track7:hover {
+   visibility: visible;
+}
+.track7:hover + .track8, .track8:hover {
+   visibility: visible;
+}
+.track8:hover + .track9, .track9:hover {
+   visibility: visible;
+}
+.track9:hover + .track10, .track10:hover {
+   visibility: visible;
+}
+.track10:hover + .track11, .track11:hover {
+   visibility: visible;
+}
+.track11:hover + .finish, .finish:hover {
+   visibility: visible;
+}
+.finish:hover + .track12, .track12:hover {
+   visibility: visible;
+}
+
+/* About */
+.container-about {
+   max-width: 1180px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.about {
+   font-family: "Exo", sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   padding: 120px 0;
+   color: #fff;
+   background: url("../img/bg-about.jpg") center / cover no-repeat;
+   text-align: center;
+}
+.about-content > * {
+   margin-bottom: 20px;
+}
+.about-content {
+   max-width: 992px;
+   margin: 0 auto;
+   margin-bottom: 60px;
+}
+/* Загальний клас для заголовків About and Footer */
+.title {
+   font-weight: 700;
+   font-size: 60px;
+   line-height: 1.17;
+   text-transform: uppercase;
+}
+/* Загальний псевдоелемент для заголовків */
+.title::after {
+   content: "";
+   display: block;
+   height: 1px;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+   margin-top: 20px;
+}
+.about-content h2 {
+   margin-bottom: 20px;
+}
+.about-content h2::after {
+   max-width: 40%;
+   margin: 0 auto;
+   margin-top: 20px;
+}
+.about-content p {
+   font-size: 18px;
+   line-height: 2.2;
+   letter-spacing: -0.36px;
+   text-transform: capitalize;
+}
+.about-content > *:last-child {
+   margin-bottom: 0;
+}
+.about-list {
+   font-family: "Orbitron", sans-serif;
+   font-weight: 500;
+   line-height: 1.25;
+   overflow: hidden;
+}
+.about-list ul {
+   text-transform: capitalize;
+   font-size: 0;
+   /* В перспективі стилізувати або прибрати скрол для десктоп версії */
+   white-space: nowrap;
+   overflow-x: auto;
+}
+.about-list li {
+   display: inline-block;
+   font-size: 20px;
+   vertical-align: middle;
+}
+.about-list li::after {
+   content: "";
+   width: 10px;
+   height: 10px;
+   margin: 0 60px;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+   border-radius: 50%;
+   vertical-align: middle;
+}
+.about-list li:last-child::after {
+   display: none;
+}
+
+/* Footer */
+.container-footer {
+   max-width: 1180px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.footer {
+   font-family: "Exo", sans-serif;
+   font-weight: 400;
+   font-size: 20px;
+   color: #fff;
+   background-color: #000;
+}
+.footer-gradient {
+   height: 50px;
+   background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(66,255,0,1) 50%, rgba(36,0,255,1) 100%);
+   opacity: 0.1;
+}
+.contacts {
+   max-width: 960px;
+   padding: 160px 0 112px 0;
+}
+.contacts > * {
+   margin-bottom: 40px;
+}
+.contacts h2 {
+   margin-bottom: 80px;
+}
+.contacts ul li {
+   display: inline-block;
+   margin-right: 80px;
+   letter-spacing: -0.36px;
+}
+.contacts ul li:last-child {
+   margin-right: 0;
+}
+.contacts li img {
+   max-width: 20px;
+   margin-right: 20px;
+}
+.contacts > *:last-child {
+   margin-bottom: 0;
+}
+
+ul li:has( img) {
+   color: rgb(126, 33, 33);
+}
+.contacts ul li:not(:last-child) {
+   color: rgb(0, 177, 38);
+}
