@@ -1,0 +1,249 @@
+/* Fonts */
+@import url("fonts.css");
+
+/* Обнулення */
+@import url("reset.css");
+
+body {
+   font-family: "Proxima Nova", sans-serif;
+   font-weight: 600;
+   font-size: 20px;
+   color: #2B2929;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+}
+[class*="__container"] {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+/* Header */
+.header {
+   padding: 25px 0;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 50;
+   background: #fff;
+}
+.header__container {
+   position: relative;
+}
+.header__logo {
+   display: inline-block;
+   vertical-align: middle;
+   margin-right: 34px;
+}
+.logo__image {
+   max-width: 250px;
+}
+
+.button {
+   font-size: 19px;
+   line-height: 1.26; /* 24/19 */
+   padding: 11px 20px 11px 54px;
+   background: #FFBC57;
+   color: #fff;
+   border-radius: 8px;
+   position: relative;
+}
+.button::before {
+   content: "";
+   width: 24px;
+   height: 24px;
+   background: url("../img/icon/catalog.svg") center / contain no-repeat;
+   position: absolute;
+   top: 50%;
+   left: 20px;
+   margin-top: -12px;
+}
+.button:hover {
+   background: rgba(255, 188, 87, 0.85);
+}
+.button:active {
+   background: #FFBC57;
+}
+
+
+.header__menu {
+   padding: 8px 0;
+   background-color: #fff;
+   border-radius: 8px 0 0 8px;
+   position: absolute;
+   top: 85px;
+   left: 15px;
+   display: none;
+}
+.header__menu:target {
+   display: block;
+}
+.menu__list {
+   min-width: 300px;
+}
+.menu__item:hover {
+   background: #FFBC57;
+}
+.menu__item:hover .menu__sub-menu {
+   display: block;
+}
+.menu__link {
+   width: 100%;
+   padding: 10px 39px 10px 30px;
+   position: relative;
+}
+.menu__link::after {
+   content: "";
+   width: 24px;
+   height: 24px;
+   background: url("../img/icon/arrow.svg") center / contain no-repeat;
+   position: absolute;
+   top: 50%;
+   right: 15px;
+   margin-top: -12px;
+}
+.menu__item:hover .menu__link::after {
+   background: url("../img/icon/arrow-black.svg") center / contain no-repeat;
+}
+.menu__icon {
+   max-width: 40px;
+   margin-right: 15px;
+   vertical-align: middle;
+}
+.menu__caption {
+   vertical-align: middle;
+}
+
+.menu__sub-menu {
+   min-width: 100%;
+   height: 100%;
+   padding: 8px 0;
+   background: #fff;
+   border-radius: 0 8px 8px 0;
+   white-space: nowrap;
+   position: absolute;
+   top: 0;
+   left: 100%;
+   display: none;
+}
+.sub-menu__list {
+   height: 100%;
+   font-weight: 400;
+   font-size: 19px;
+   line-height: 2.1;
+   border-left: 5px solid #FFBC57;
+   overflow: auto;
+}
+.sub-menu__item:hover {
+   background: #FFBC57;
+}
+.sub-menu__link {
+   padding: 10px 20px 10px 35px;
+}
+
+
+/* Page */
+.page {
+   padding: 50px 0;
+   background: #F8F8F8;
+   height: 2000px;
+}
+.popular-categories__title {
+   font-size: 40px;
+   line-height: 1.2; /* 48/40 */
+   margin-bottom: 40px;
+}
+.popular-categories__wrapper {
+   font-size: 0;
+   margin: 0 -10px;
+}
+.popular-categories__container-card {
+   display: inline-block;
+   padding: 0 5px;
+   margin-bottom: 24px;
+}
+.card {
+   max-width: 250px;
+   background: #fff;
+   border-radius: 8px;
+   box-shadow: -3px 4px 15px 0 rgba(0, 0, 0, 0.06);
+   overflow: hidden;
+   position: relative;
+}
+.card::before {
+   content: "";
+   width: 280px;
+   height: 280px;
+   border-radius: 50%;
+   background: #f8f8f8;
+   position: absolute;
+   top: 36%; /* 108/300 */
+   left: 50%;
+   margin-left: -140px;
+}
+.card::after {
+   content: "";
+   width: 50px;
+   height: 50px;
+   background: url("../img/icon/arrow-top-right.svg") center / contain no-repeat;
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+   z-index: 2;
+   display: none;
+}
+.card:hover {
+   box-shadow: -3px 4px 20px 0 rgba(0, 0, 0, 0.12);
+}
+.card:hover .card__title {
+   color: #FFBC57;
+}
+.card:hover::after {
+   display: block;
+}
+.card__text {
+   padding: 20px;
+   padding-bottom: 0;
+   font-size: 20px;
+   line-height: 1.5; /* 28/20 */
+   position: relative;
+}
+.card__text > *:not(:last-child) {
+   margin-bottom: 5px;
+}
+.card__title {
+}
+.card__amount {
+   color: #B1B1B1;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+}
+.card__image {
+   max-width: 250px;
+   position: relative;
+   z-index: 1;
+}
+.page__return-top {
+   width: 50px;
+   height: 50px;
+   background: url("../img/icon/arrow-top-right.svg") 0 0 / 50px 50px no-repeat;
+   position: fixed;
+   bottom: 70px;
+   right: 70px;
+}
+
+/* Footer */
+.footer {
+   padding: 20px 0;
+   background: #2B2929;
+}
+.сopyright {
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 1.46; /* 22/15 */
+   text-align: center;
+   color: #B1B1B1;
+}
