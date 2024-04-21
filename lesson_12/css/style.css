@@ -1,0 +1,470 @@
+/* Fonts */
+
+/* Обнулення */
+@import url("reset.css");
+
+@keyframes wrapper-bg {
+   0% {
+   }
+   100% {
+      background-position: 1200px 0;
+   }
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   background: url("../img/wrapper-bg.webp") 0 0 / cover repeat-x;
+   animation: wrapper-bg 120s 15.5s forwards linear infinite;
+}
+[class*="__container"] {
+   max-width: 1320px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+/* Page */
+@keyframes page-bg {
+   0% {
+      background-position: 0 0;
+   }
+   100% {
+      background-position: 0 1100px;
+   }
+}
+.page {
+   height: 100vh;
+   background: url("../img/page-bg.webp") 0 0 / cover no-repeat;
+   position: relative;
+   animation: page-bg 6s 12s forwards;
+}
+
+/* =================== Car =================== */
+@keyframes appearance-car {
+   0% {
+      right: -1000px;
+      transform: translateY(-50px);
+   }
+   100% {
+      right: 50%;
+      transform: translateX(50%);
+   }
+}
+@keyframes ascent-car {
+   0% {
+   }
+   100% {
+      right: 50%;
+      transform: translate(50%, -300px);
+   }
+}
+@keyframes shaking-car {
+   0% {
+   }
+   100% {
+      transform: translate(50%, -230px) rotate(2deg);
+   }
+}
+.car {
+   width: 756px;
+   height: 258px;
+   position: absolute;
+   bottom: 70px;
+   animation: appearance-car 8s forwards ease-out, ascent-car 8s 11s forwards, shaking-car 2s 14s ease-in-out infinite alternate;
+}
+.car__body {
+   width: inherit;
+   height: inherit;
+   position: relative;
+   background: url("../img/car-bg.svg") 0 0 / 100% no-repeat
+}
+
+/* ------------ Car lines -------------- */
+.grey-line > svg {
+   position: absolute;
+}
+.grey-line__left {
+   top: 122px;
+   left: 76px;
+}
+.grey-line__right {
+   top: 113px;
+   right: 199px;
+}
+.grey-line__top {
+   top: 58px;
+   right: 86px;
+}
+/* Red line */
+.red-line > svg {
+   position: absolute;
+}
+.red-line__left {
+   top: 116px;
+   left: 70px;
+}
+.red-line__right {
+   top: 111px;
+   right: 204px;
+}
+.red-line__top {
+   top: 54px;
+   right: 74px;
+}
+@keyframes grey-line-light {
+   0% {
+   }
+   100% {
+      stroke: #00f7ff;
+      filter: drop-shadow(0px 0px 18px #f700ff);
+   }
+}
+.grey-line > svg path {
+   animation: grey-line-light 3s 9s ease-in-out infinite;
+}
+
+@keyframes red-line-light {
+   0% {
+   }
+   100% {
+      stroke: #f700ff;
+      filter: drop-shadow(3px 4px 18px #00f7ff);
+   }
+}
+.red-line > svg path {
+   animation: red-line-light 3s 9s ease-in-out infinite;
+}
+
+/* ------------ Car lamps -------------- */
+.lamps {
+   position: absolute;
+   top: 80px;
+   right: 124px;
+}
+.lamps__lamp {
+   display: inline-block;
+   width: 12px;
+   height: 14px;
+   background: #b3232a;
+   border-radius: 4px 4px 0 0;
+   box-shadow: 0 -1px 8px #da2932;
+   position: relative;
+   perspective: 30px;
+}
+.lamps__lamp::before {
+   content: "";
+   width: 8px;
+   height: 10px;
+   background: #ee0d18;
+   border-radius: 4px 4px 0 0;
+   box-shadow: 0px 0px 14px #da2932;
+   position: absolute;
+   top: 2px;
+   right: 2px;
+}
+@keyframes lamps-rotate {
+   0% {}
+   100% {
+      transform: rotate3d(0, 1, 0, -720deg);
+   }
+}
+.lamps__lamp::before {
+   animation: lamps-rotate 1.2s 9s infinite linear;
+}
+
+/* ------------ Car wheels -------------- */
+.car__wheels {
+   position: absolute;
+   top: 136px;
+   left: 99px;
+   z-index: 12;
+}
+.wheels {
+   /* background: rgba(218, 165, 32, 0.63); */
+   /* width: 572px; */
+   width: 562px;
+   height: 120px;
+   font-size: 0;
+}
+.wheels__wrapper {
+   display: inline-block;
+   width: 50%;
+   height: inherit;
+   position: relative;
+}
+
+/* Wheel */
+.wheel {
+   width: 120px;
+   height: 120px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   perspective: 2400px;
+}
+.wheel--size {
+   width: 112px;
+   height: 112px;
+   top: 8px;
+   left: 0;
+}
+
+/* Front side of the wheel */
+@keyframes wheel-transformation {
+   0% {}
+   100% {
+      transform: rotate3d(1, 0, 0, -90deg) translate3d(0px, 0px, -3px);
+   }
+}
+@keyframes wheel-opacity {
+   0% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
+}
+.wheel__front-side {
+   width: 120px;
+   height: 120px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 10;
+   transform-origin: bottom;
+   animation: wheel-transformation 4.5s 10s forwards, wheel-opacity 0s 14s forwards;
+}
+.wheel__front-side--size {
+   width: 112px;
+   height: 112px;
+}
+.wheel__wrapper {
+   width: inherit;
+   height: inherit;
+   border-radius: 50%;
+   background: #282828;
+   position: relative;
+}
+
+/* Disk */
+@keyframes wheel-rotation {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(-720deg);
+   }
+}
+.disk {
+   width: 76px;
+   height: 76px;
+   border: 6px solid #fcfcfc;
+   border-radius: 50%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   translate: -50% -50%;
+   overflow: hidden;
+   animation: wheel-rotation 8s ease-out;
+}
+.disk--size {
+   width: 72px;
+   height: 72px;
+}
+.disk::before {
+   content: "";
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   background: #fefefe;
+   position: absolute;
+   top: inherit;
+   left: inherit;
+   translate: inherit;
+   z-index: 1;
+}
+.disk--size::before {
+   width: 30px;
+   height: 30px;
+}
+.disk::after {
+   content: "";
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   background: #282828;
+   position: absolute;
+   top: inherit;
+   left: inherit;
+   translate: inherit;
+   z-index: 2;
+}
+.disk--size::after {
+   width: 10px;
+   height: 10px;
+}
+.disk__spoke {
+   display: block;
+   width: inherit;
+   height: 2px;
+   background: #bfbfbf;
+   position: absolute;
+   top: inherit;
+   left: inherit;
+   translate: inherit;
+   rotate: 0deg;
+}
+.disk .disk__spoke:nth-child(2) {
+   rotate: 11.25deg;
+}
+.disk .disk__spoke:nth-child(3) {
+   rotate: 22.5deg;
+}
+.disk .disk__spoke:nth-child(4) {
+   rotate: 33.75deg;
+}
+.disk .disk__spoke:nth-child(5) {
+   rotate: 45deg;
+}
+.disk .disk__spoke:nth-child(6) {
+   rotate: 56.25deg;
+}
+.disk .disk__spoke:nth-child(7) {
+   rotate: 67.5deg;
+}
+.disk .disk__spoke:nth-child(8) {
+   rotate: 78.75deg;
+}
+.disk .disk__spoke:nth-child(9) {
+   rotate: 90deg;
+}
+.disk .disk__spoke:nth-child(10) {
+   rotate: 101.25deg;
+}
+.disk .disk__spoke:nth-child(11) {
+   rotate: 112.5deg;
+}
+.disk .disk__spoke:nth-child(12) {
+   rotate: 123.75deg;
+}
+.disk .disk__spoke:nth-child(13) {
+   rotate: 135deg;
+}
+.disk .disk__spoke:nth-child(14) {
+   rotate: 146.25deg;
+}
+.disk .disk__spoke:nth-child(15) {
+   rotate: 157.5deg;
+}
+.disk .disk__spoke:nth-child(16) {
+   rotate: 168.75deg;
+}
+
+/* Back of the wheel */
+@keyframes wheel-transformation-back {
+   0% {
+      transform: rotate3d(1, 0, 0, 90deg);
+   }
+   100% {
+      transform: rotate3d(1, 0, 0, 0deg);
+   }
+}
+.wheel__back-side {
+   width: 120px;
+   height: 120px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   transform: rotate3d(1, 0, 0, 90deg);
+   animation: wheel-transformation-back 7.5s 10s forwards;
+}
+.wheel__back-side--size {
+   width: 112px;
+   height: 112px;
+}
+
+/* Shock-absorber */
+.shock-absorber {
+   position: absolute;
+   left: 50%;
+   bottom: 54px;
+   translate: -50% 0;
+}
+.shock-absorber--size {
+   bottom: 46px;
+}
+.shock-absorber >*:not(:last-child) {
+   margin-right: 2px;
+}
+.shock-absorber > div {
+   display: inline-block;
+   background: #282828;
+}
+
+.shock-absorber__left-lever {
+   width: 10px;
+   height: 56px;
+   border-radius: 100% 40% 0% 100% / 100% 0% 0% 0%;
+}
+.shock-absorber__left-lever--size {
+   height: 52px;
+}
+.shock-absorber__axis {
+   width: 32px;
+   height: 38px;
+   border-radius: 5px 5px 0 0;
+   position: relative;
+}
+.shock-absorber__axis--size {
+   width: 30px;
+   height: 34px;
+}
+.shock-absorber__axis::before {
+   content: "";
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   border: 3px solid #d9d9d9;
+   position: absolute;
+   top: 8px;
+   left: 50%;
+   translate: -50% 0;
+}
+.shock-absorber__axis--size::before {
+   width: 10px;
+   height: 10px;
+   top: 6px;
+   border-width: 2px;
+}
+.shock-absorber__right-lever {
+   width: 10px;
+   height: 56px;
+   border-radius: 40% 100% 0% 100% / 0% 100% 0% 0%;
+}
+.shock-absorber__right-lever--size {
+   height: 52px;
+}
+.wheel__tire {
+   width: 120px;
+   height: 48px;
+   background: #282828;
+   border-radius: 10px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+}
+.wheel__tire--size {
+   width: 112px;
+   height: 42px;
+}
+/* Wheel disk back-side */
+.wheel__tire::after {
+   content: "";
+   width: 72px;
+   height: 6px;
+   background: #d9d9d9;
+   border-radius: 2px 2px 0 0;
+   position: absolute;
+   left: 50%;
+   top: -6px;
+   translate: -50% 0;
+}
