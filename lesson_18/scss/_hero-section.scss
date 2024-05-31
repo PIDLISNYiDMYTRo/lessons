@@ -1,0 +1,286 @@
+.page {
+   &__hero {
+      @include adaptiveValue("margin-bottom", 80, 0, 0, 1199.98, 393);
+   }
+}
+.hero {
+   position: relative;
+   overflow: hidden;
+   &::before,
+   &::after {
+      content: "";
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, rgba(151, 0, 255, 0.60) 0%, rgba(87, 255, 28, 0.60) 36.9%, rgba(255, 0, 0, 0.60) 67.4%, rgba(0, 56, 255, 0.60) 100%);
+      filter: blur(50px);
+      opacity: 0.3;
+      position: absolute;
+      pointer-events: none;
+      @media (max-width: 767.98px) {
+         display: none;
+      }
+   }
+   &::before {
+      top: -19%; // 114/600
+      left: -9.9%; // 150/1512
+      animation: hero-gradient-left 15s linear infinite;
+      @keyframes hero-gradient-left {
+         35% {
+            top: calc(123.8% - 480px); // 143/600
+            left: calc(107.6% - 480px); // 115/1512
+         }
+         70% {
+            top: calc(140% - 480px); // 240/600
+            left: -9.7%; // 146/1512
+         }
+      }
+   }
+   &::after {
+      bottom: -22.5%; // 135/600
+      right: -4.9%; // 74/1512
+      animation: hero-gradient-right 15s linear infinite;
+      @keyframes hero-gradient-right {
+         35% {
+            bottom: calc(123.7% - 480px); // 142/600
+            right: calc(111.6% - 480px); // 175/1512
+         }
+         70% {
+            bottom: calc(119.5% - 480px); // 117/600
+            right: -7.6%; // 115/1512
+         }
+      }
+   }
+   &__container {
+      @include adaptiveValue("min-height", 600, 220, 0, 991.98, 393);
+      max-width: 1303px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 20px;
+      @media (max-width: 359.98px) {
+         justify-content: center;
+         text-align: center;
+      }
+   }
+   &__content {
+   }
+   &__image {
+      align-self: flex-end;
+      margin-right: 84px;
+      @media (max-width: 767.98px) {
+         margin-right: 0;
+         align-self: center;
+      }
+   }
+}
+.content-hero {
+   @include adaptiveValue("max-width", 584, 233, 0, 767.98, 393);
+   padding-top: 15px;
+   padding-bottom: 15px;
+   position: relative;
+   z-index: 2;
+   @media (max-width: 359.98px) {
+      max-width: 100%;
+   }
+   & > *:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 20, 12, 0, 767.98, 393);
+   }
+   &__author {
+      @include adaptiveValue("font-size", 18, 14, 0, 767.98, 393);
+      line-height: 1.111111; /* 20/18 */
+      letter-spacing: -0.36px;
+      text-transform: uppercase;
+      display: grid;
+      justify-content: start;
+      @include adaptiveValue("row-gap", 10, 4, 0, 767.98, 393);
+      &::after {
+         content: "";
+         width: 121%;
+         height: 1px;
+         background: linear-gradient(90deg, #F00 0%, #42FF00 48.9%, #2400FF 100%);
+      }
+      @media (max-width: 359.98px) {
+         justify-content: center;
+      }
+   }
+   &__title {
+      font-weight: 700;
+      @include adaptiveValue("font-size", 80, 32, 0, 1303, 393);
+      line-height: 0.875; /* 70/80 */
+      text-transform: uppercase;
+      @media (max-width: 767.98px) {
+         line-height: 1.1;
+      }
+   }
+   &__label {
+      @include adaptiveValue("font-size", 18, 14, 0, 767.98, 393);
+      line-height: 2.222222; /* 40/18 */
+      @include adaptiveValue("letter-spacing", -0.36, -0.28, 0, 767.98, 393);
+      text-transform: capitalize;
+      @media (max-width: 767.98px) {
+         line-height: 1.1;
+      }
+   }
+   &__button {
+      font-family: $secondaryFont;
+      font-weight: 900;
+      @include adaptiveValue("font-size", 20, 14, 0, 767.98, 393);
+      text-transform: uppercase;
+      background-color: #6f00a9;
+      @include adaptiveValue("padding-block", 15, 8, 0, 767.98, 393);
+      @include adaptiveValue("padding-inline", 60, 40, 0, 767.98, 393);
+      transition: background-color .5s;
+      &:focus-visible {
+         outline-offset: 4px;
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #0b0045;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+         }
+      }
+      @media (max-width: 359.98px) {
+         width: 100%;
+      }
+   }
+}
+.image-hero {
+   position: relative;
+   @media (max-width: 767.98px) {
+      @include adaptiveValue("width", 354, 97, 0, 767.98, 393);
+      @include adaptiveValue("height", 316, 109, 0, 767.98, 393);
+      margin-right: -15px;
+      margin-bottom: -60px;
+   }
+   @media (max-width: 359.98px) {
+      display: none;
+   }
+   &::before {
+      content: "";
+      @include adaptiveValue("width", 110, 80, 0, 1303, 990);
+      @include adaptiveValue("height", 136, 30, 0, 767.98, 393);
+      background: url("../img/hero-adobe-premiere.png") center / contain no-repeat;
+      position: absolute;
+      top: 41px;
+      @include adaptiveValue("left", -110, -40, 0, 1303, 990);
+      transform: rotate(-45deg);
+      @media (max-width: 767.98px) {
+         @include adaptiveValue("width", 80, 26, 0, 767.98, 393);
+         top: -32%;
+         @include adaptiveValue("left", -60, 0, 0, 767.98, 393);
+         transform: rotate(-15deg);
+      }
+   }
+   &::after {
+      content: "";
+      @include adaptiveValue("width", 70, 50, 0, 1303, 990);
+      @include adaptiveValue("height", 88, 25, 0, 767.98, 393);
+      background: url("../img/hero-after-effects.png") center / contain no-repeat;
+      position: absolute;
+      top: 86px;
+      @include adaptiveValue("right", -76, -20, 0, 1303, 990);
+      transform: rotate(30deg);
+      @media (max-width: 767.98px) {
+         @include adaptiveValue("width", 50, 18, 0, 767.98, 393);
+         top: -18%;
+         @include adaptiveValue("left", 120, 40, 0, 767.98, 393);
+         transform: rotate(18deg);
+      }
+   }
+   &__decor {
+      display: flex;
+      column-gap: 12px;
+      align-items: flex-end;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      @media (max-width: 767.98px) {
+         align-items: flex-start;
+      }
+      &::before {
+         content: "";
+         @include adaptiveValue("width", 354, 97, 0, 767.98, 393);
+         @include adaptiveValue("height", 316, 109, 0, 767.98, 393);
+         background: url("../img/hero-decor-left.png") center / contain no-repeat;
+         flex-shrink: 0;
+      }
+      &::after {
+         content: "";
+         width: 322px;
+         height: 287px;
+         background: url("../img/hero-decor-right.png") center / contain no-repeat;
+         flex-shrink: 0;
+         @media (max-width: 767.98px) {
+            display: none;
+         }
+      }
+   }
+   &__wrapper {
+      width: 376px;
+      height: 508px;
+      position: relative;
+      z-index: 1;
+      @media (max-width: 767.98px) {
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+         &::before,
+         &::after {
+            content: "";
+            @include adaptiveValue("width", 360, 120, 0, 767.98, 393);
+            @include adaptiveValue("height", 360, 120, 0, 767.98, 393);
+            border-radius: 50%;
+            background: linear-gradient(90deg, rgba(151, 0, 255, 0.60) 0%, rgba(87, 255, 28, 0.60) 36.9%, rgba(255, 0, 0, 0.60) 67.4%, rgba(0, 56, 255, 0.60) 100%);
+            filter: blur(25px);
+            opacity: 0.3;
+            position: absolute;
+            pointer-events: none;
+         }
+         &::before {
+            top: 6.7%; // 20/300
+            left: 9.2%; // 36/393
+            animation: hero-gradient-left 10s linear infinite;
+            @keyframes hero-gradient-left {
+               35% {
+                  top: calc(102.3% - 120px);
+                  left: calc(89% - 120px);
+               }
+               70% {
+                  top: calc(104% - 120px);
+                  left: 9%;
+               }
+            }
+         }
+         &::after {
+            bottom: -2.3%; // 7/300
+            right: 8.9%; // 35/393
+            animation: hero-gradient-right 10s linear infinite;
+            @keyframes hero-gradient-right {
+               35% {
+                  bottom: calc(93.3% - 120px);
+                  right: calc(90.8% - 120px);
+               }
+               70% {
+                  bottom: calc(95% - 120px);
+                  right: 8.6%;
+               }
+            }
+         }
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         aspect-ratio: 376 / 508;
+         object-fit: cover;
+      }
+   }
+   &__box-decor {
+      @include adaptiveValue("width", 376, 177, 0, 767.98, 393);
+      @include adaptiveValue("height", 508, 260, 0, 767.98, 393);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+   }
+}

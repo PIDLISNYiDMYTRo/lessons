@@ -1,0 +1,249 @@
+@use "sass:math";
+// Google fonts
+@import url("https://fonts.googleapis.com/css?family=Exo:regular,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Orbitron:500,900&display=swap");
+
+// Reset
+@import "_reset.scss";
+@import "_mixins.scss";
+
+// Variables
+$secondaryFont: "Orbitron", sans-serif;
+$containerWidth: 1303px;
+$minWidth: 393px;
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   color: #fff;
+   background-color: #000001;
+   font-family: "Exo", sans-serif;
+}
+[class*="__container"] {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin: 0 auto;
+}
+
+// ============ Header ============
+.header {
+   background-color: rgba(0, 0, 0, 0.80);
+   padding-top: 10px;
+   position: sticky;
+   top: -10px;
+   z-index: 50;
+   @media (max-width: 767.98px) {
+      padding-top: 0;
+   }
+   &__container {
+      @include adaptiveValue("min-height", 150, 87, 0, 767.98, 393);
+      max-width: 1303px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 30px;
+      @media (max-width: 767.98px) {
+         padding-top: 40px;
+         padding-bottom: 7px;
+      }
+   }
+   &__logo {
+      font-family: "Exo 2", sans-serif;
+      @include adaptiveValue("font-size", 30, 16, 0, 991.98, 393);
+      letter-spacing: -3px;
+      flex-shrink: 0;
+      user-select: none;
+   }
+   &__nav {
+   }
+   &__social {
+   }
+}
+.nav {
+   font-family: $secondaryFont;
+   text-transform: uppercase;
+   line-height: 1.25; /* 20/16 */
+   &__list {
+      display: flex;
+      @include adaptiveValue("column-gap", 60, 20, 0, 1303, 992);
+      row-gap: 5px;
+      flex-wrap: wrap;
+   }
+   &__item {
+   }
+   &__link {
+      @include adaptiveValue("padding", 10, 5, 0, 1303, 992);
+      transition: background-color .5s;
+      @media (any-hover: hover) {
+         &:hover {
+            background-color: #6f00a9;
+         }
+      }
+   }
+}
+.social {
+   &__list {
+      display: flex;
+      column-gap: 4px;
+      align-items: center;
+      @media (max-width: 767.98px) {
+         column-gap: 12px;
+      }
+   }
+   &__item {
+   }
+   &__link {
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 991.98px) {
+         width: 25px;
+         height: 25px;
+      }
+      @media (max-width: 767.98px) {
+         width: 20px;
+         height: 20px;
+      }
+      svg {
+         max-width: 20px;
+         path {
+            transition: all .5s;
+         }
+      }
+      @media (any-hover: hover) {
+         &:hover svg path {
+            fill: #6f00a9;
+         }
+      }
+   }
+   @media (max-width: 767.98px) {
+      align-self: center;
+   }
+}
+
+// =========== Components ===========
+// --- Title section ---
+.title {
+   font-weight: 700;
+   @include adaptiveValue("font-size", 60, 24, 0, 1200, 393);
+   line-height: 1.166667; /* 70/60 */
+   text-transform: uppercase;
+   display: grid;
+   justify-content: start;
+   row-gap: 20px;
+   @include adaptiveValue("row-gap", 20, 4, 0, 767.98, 393);
+   &::after {
+      content: "";
+      width: 125%;
+      height: 1px;
+      background: linear-gradient(90deg, #F00 0%, #42FF00 48.9%, #2400FF 100%);
+   }
+}
+.title--center {
+   justify-content: center;
+   justify-items: center
+}
+
+// =========== Hero section ===========
+@import "_hero-section.scss";
+
+// =========== About section ===========
+@import "_about-section.scss";
+
+// =========== Best-edits section ===========
+@import "_best-edits-section.scss";
+
+// Burger
+.menu-icon {
+   display: none;
+}
+@media (max-width: 767.98px) {
+   .header__logo {
+      position: relative;
+      z-index: 3;
+   }
+   .menu-icon {
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      flex-shrink: 0;
+      z-index: 3;
+   }
+   .menu-icon::before,
+   .menu-icon::after,
+   .menu-icon span {
+      content: "";
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      background-color: #fff;
+      transition: all .3s;
+   }
+   .menu-icon::before {
+      top: 0;
+   }
+   .menu-icon::after {
+      bottom: 0;
+   }
+   .menu-icon span {
+      top: 50%;
+      transform: translate(0px, -50%);
+   }
+   .menu-open .menu-icon::before {
+		transform: rotate(-45deg);
+		top: 50%;
+		margin-top: -1px;
+	}
+	.menu-open .menu-icon::after {
+		transform: rotate(45deg);
+		bottom: 50%;
+		margin-bottom: -1px;
+	}
+	.menu-open .menu-icon span {
+		transform: scale(0);
+	}
+   .nav {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      @include adaptiveValue("top", 150, 87, 0, 767.98, 393);
+      right: -100%;
+      background-color: rgba(0, 0, 0, 0.90);
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 100px;
+      font-size: 28px;
+      z-index: 2;
+      overflow: auto;
+      transition: all .3s;
+      &__list {
+         flex-direction: column;
+         align-items: center;
+         row-gap: 45px;
+      }
+   }
+   .nav::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      width: 100%;
+      @include adaptiveValue("height", 150, 87, 0, 767.98, 393);
+      background-color: rgba(0, 0, 0, 0.80);
+      z-index: 2;
+   }
+   .menu-open .nav {
+		right: 0;
+	}
+	.menu-open .nav::before {
+		right: 0;
+	}
+   .menu-open body {
+		overflow: hidden;
+	}
+}
