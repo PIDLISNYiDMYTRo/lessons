@@ -1,0 +1,202 @@
+.follow-products {
+   background: rgba(30, 40, 50, 0.05);
+   min-height: toRem(754);
+   display: flex;
+   align-items: center;
+   // .follow-products__container
+   &__container {
+      padding-top: toRem(40);
+      padding-bottom: toRem(40);
+   }
+
+   // .follow-products__instagram
+   &__instagram {
+      /* Margin-bottom start - 70px --> end - 40px (1350px --> 479.98px) */
+      @include adaptiveValue("margin-bottom", 70, 40, 0, 1350, 479.98);
+   }
+
+   // .follow-products__subscribe
+   &__subscribe {
+   }
+}
+.instagram {
+
+   // .instagram__title
+   &__title {
+      /* Margin-bottom start - 60px --> end - 30px (1350px --> 479.98px) */
+      @include adaptiveValue("margin-bottom", 60, 30, 0, 1350, 479.98);
+   }
+
+   // .instagram__list
+   &__list {
+      display: flex;
+      justify-content: center;
+      gap: toRem(12);
+      flex-wrap: wrap;
+      @media (min-width: toEm(479.98)) {
+         gap: toRem(24);
+      }
+   }
+
+   // .instagram__item
+   &__item {
+      flex-basis: toRem(220);
+      @media (min-width: toEm(359.98)) {
+         flex-basis: toRem(150);
+      }
+      @media (min-width: toEm(479.98)) {
+         flex-basis: toRem(180);
+      }
+      @media (min-width: toEm(1349.98)) {
+         flex-basis: toRem(200);
+      }
+   }
+
+   // .instagram__link
+   &__link {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      @media (any-hover: hover) {
+         &:hover {
+            &::after {
+               opacity: 1;
+            }
+            &::before {
+               transform: translate(-50%, -50%) scale(1);
+               opacity: 1;
+            }
+         }
+      }
+      @media (any-hover: none) {
+         &:hover {
+            &::after {
+               opacity: 1;
+            }
+         }
+      }
+      &::before {
+         content: "";
+         width: 150%;
+         height: 150%;
+         border-radius: 50%;
+         background-color: rgba(0, 0, 0, 0.50);
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%) scale(0.1);
+         opacity: 0;
+         transition: transform .2s, opacity .2s;
+         will-change: transform;
+      }
+      &::after {
+         content: "";
+         width: toRem(60);
+         height: toRem(60);
+         background: url("../img/icons/instagram.svg") center / toRem(48) toRem(48) no-repeat;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         opacity: 0;
+         z-index: 1;
+         transition: opacity .3s;
+      }
+      &:focus-visible::before {
+         transform: translate(-50%, -50%) scale(1);
+         opacity: 1;
+      }
+      &:focus-visible::after {
+         opacity: 1;
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         aspect-ratio: 1 / 1;
+         object-fit: cover;
+      }
+   }
+}
+.title {
+}
+.subscribe {
+
+   // .subscribe__title
+   &__title {
+      /* Margin-bottom start - 70px --> end - 30px (1350px --> 479.98px) */
+      @include adaptiveValue("margin-bottom", 70, 40, 0, 1350, 479.98);
+   }
+
+   // .subscribe__form
+   &__form {
+      max-width: toRem(760);
+      margin: 0 auto;
+      display: flex;
+      column-gap: toRem(26);
+      input {
+         font-family: "Roboto", sans-serif;
+         border-bottom: toRem(2) solid #000;
+         padding: 0 toRem(15) toRem(13);
+         transition: border-color .2s;
+         &::placeholder {
+            font-weight: 600;
+            color: rgba(30, 40, 50, 0.50);
+         }
+         &:focus {
+            outline: none;
+         }
+         &:focus-visible {
+            border-color: #ff6f61;
+         }
+      }
+   }
+
+   // .subscribe__button
+   &__button {
+      align-self: flex-end;
+      color: #1e2832;
+      text-transform: uppercase;
+      display: grid;
+      justify-items: center;
+      row-gap: toRem(10);
+      white-space: nowrap;
+      transition: color .2s;
+      @media (any-hover: hover) {
+         &:hover {
+            color: #ff6f61;
+            &::after {
+               background-color: #ff6f61;
+            }
+         }
+         &:active {
+            color: #1e2832;
+            &::after {
+               background-color: #1e2832;
+            }
+         }
+      }
+      @media (any-hover: none) {
+         &:active {
+            color: #ff6f61;
+            &::after {
+               background-color: #ff6f61;
+            }
+         }
+      }
+      &:focus-visible {
+         outline: none;
+         color: #ff6f61;
+      }
+      &:focus-visible::after {
+         background-color: #ff6f61;
+      }
+      &::after {
+         content: "";
+         width: 135.2%;
+         height: toRem(2);
+         background-color: #1e2832;
+         transition: background-color .2s;
+      }
+   }
+}

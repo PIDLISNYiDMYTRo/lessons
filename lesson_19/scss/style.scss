@@ -1,0 +1,85 @@
+@use "sass:math";
+
+// Google fonts
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:regular,600&display=swap");
+// Local fonts
+@import "_fonts.scss";
+// Reset
+@import "_reset.scss";
+// Mixins
+@import "_mixins.scss";
+
+// Налаштування адаптивної сітки ==============================================================================================================
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1350;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+$containerWidth: 1350;
+$minWidth: 390;
+// ===============================================================================
+
+// Сomponents
+@import "_header.scss";
+@import "_components.scss";
+@import "_hero.scss";
+@import "_popular-styles.scss";
+@import "_newsletter-bestsellers.scss";
+@import "_zara.scss";
+@import "_follow-products.scss";
+@import "_footer.scss";
+/* ------------------------------------------------ */
+
+body {
+   font-family: "Open Sans", sans-serif;
+}
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+
+   display: flex;
+   flex-direction: column;
+}
+.wrapper > main {
+   flex-grow: 1;
+}
+/* ---------------------------- */
+[class*="__container"] {
+   max-width: toRem(1350);
+	padding-left: toRem(15);
+	padding-right: toRem(15);
+	margin: 0 auto;
+}
+// Margin section
+[class*="--margin-section"] {
+   /* Margin-bottom start - 140px --> end - 60px (1350px --> 390px) */
+   @include adaptiveValue("margin-bottom", 140, 60, 0, 1350, 390);
+}
+/* ---------------------------- */
+
+a:focus-visible,
+button:focus-visible {
+   outline: 2px solid #ff6f61;
+   outline-offset: 1px;
+}
+
+/* Стиль повзунка для Webkit-браузерів */
+body::-webkit-scrollbar {
+   width: 10px;  /* Ширина вертикального повзунка */
+}
+body::-webkit-scrollbar-track {
+   background: #f1f1f1; /* Колір треку повзунка */
+}
+body::-webkit-scrollbar-thumb {
+   background: #888; /* Колір повзунка */
+   border-radius: 4px; /* Закруглення повзунка */
+}
